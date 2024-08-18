@@ -22,8 +22,8 @@ public class PetStoreData {
 
 	public Set<PetStoreCustomer> customers = new HashSet<>();
 	public Set<PetStoreEmployee> employees = new HashSet<>();
-	
-	public PetStoreData(PetStore petStore){
+
+	public PetStoreData(PetStore petStore) {
 		petStoreId = petStore.getPetStoreId();
 		petStoreName = petStore.getPetStoreName();
 		petStoreAddress = petStore.getPetStoreAddress();
@@ -31,13 +31,13 @@ public class PetStoreData {
 		petStoreState = petStore.getPetStoreState();
 		petStoreZip = petStore.getPetStoreZip();
 		petStorePhone = petStore.getPetStorePhone();
-		
+
 		for (Customer customer : petStore.getCustomers()) {
 			customers.add(new PetStoreCustomer(customer));
 		}
-		
+
 		for (Employee employee : petStore.getEmployees()) {
 			employees.add(new PetStoreEmployee(employee));
-}
-}
+		}
+	}
 }
